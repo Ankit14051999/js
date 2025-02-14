@@ -728,7 +728,7 @@ for (let i = 0; i < data.length; i++) {
         <img src="${data[i].image}" alt="" class="img">
         <h3 class="title">${data[i].title}</h3>
         <p class="price">${data[i].price}</p>
-        <p class="rate">${data[i].rating.rate}</p>
+        <p class="rate">${data[i].rating.rate}   count: ${data[i].rating.count}</p>
         <button>Buy</button>
     </div>
     `

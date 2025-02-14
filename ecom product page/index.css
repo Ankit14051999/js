@@ -15,18 +15,20 @@ body {
 }
 
 .box {
+    background: #b4b0b0;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 30px;
 }
 
 .img {
     width: 250px;
     height: 250px;
+    border-radius: 15px;
 }
 
 .box .title {
@@ -55,5 +57,7 @@ button {
     font-size: 15px;
     font-weight: 700;
     color: antiquewhite;
-    border-radius: 200px;
+    border-radius: 500px;
 }
+
+
