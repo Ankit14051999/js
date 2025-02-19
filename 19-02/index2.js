@@ -1,6 +1,10 @@
 let employee = [];
 
 function uimaker() {
+
+  let tableBody = document.getElementById("tablebody");
+  tableBody.innerHTML = "";
+  
   employee.map((ele) => {
     let td1 = document.createElement("td");
     td1.innerHTML = ele.name;
@@ -13,7 +17,8 @@ function uimaker() {
     let td5 = document.createElement("td");
     td5.innerHTML = ele.email;
     let td6 = document.createElement("td");
-    td6.innerHTML = ele.address.ad1 + ', ' + ele.address.ad2 + ', ' + ele.address.ad3;
+    td6.innerHTML =
+      ele.address.ad1 + ", " + ele.address.ad2 + ", " + ele.address.ad3;
     let td7 = document.createElement("td");
     td7.innerHTML = ele.landmark;
     let td8 = document.createElement("td");
@@ -25,9 +30,9 @@ function uimaker() {
     let td11 = document.createElement("td");
     td11.innerHTML = ele.password;
     let tr = document.createElement("tr");
-    tr.append(td1, td2, td3, td4, td5, td6, td7, td8, td9, td10, td11)
+    tr.append(td1, td2, td3, td4, td5, td6, td7, td8, td9, td10, td11);
 
-    document.getElementById("tablebody").append(tr)
+    document.getElementById("tablebody").append(tr);
   });
 }
 
@@ -45,18 +50,22 @@ document
     let city = document.getElementById("city").value;
     let state = document.getElementById("state").value;
     let password = document.getElementById("password").value;
-    let ad1=document.getElementById("adress1").value
-    let ad2=document.getElementById("adress2").value
-    let ad3=document.getElementById("adress3").value
+    let ad1 = document.getElementById("adress1").value;
+    let ad2 = document.getElementById("adress2").value;
+    let ad3 = document.getElementById("adress3").value;
     let address = {
-      ad1,ad2,ad3
+      ad1,
+      ad2,
+      ad3,
+    };
+    let rpassword = document.getElementById("rpassword").value;
+
+    if (password !== rpassword || contact === acontact) {
+      alert(
+        `You must have made two mistakes either one of them        1.your contact number and alternative contact number does matched here. please type diffrent number      2.your Passwords and retype password do not match.please type same password.          Please check and make sure than after try again.`
+      );
+      return;
     }
- let rpassword=document.getElementById("rpassword").value
- 
- if (password !== rpassword ) {
-  alert("your Passwords and retype password do not match. Please check and try again.");
-  return; 
-}
 
     let detail = {
       name: name,
@@ -72,11 +81,6 @@ document
       password: password,
     };
 
-
-  
-
     employee.push(detail);
     uimaker();
   });
-
-  

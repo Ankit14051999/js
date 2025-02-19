@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./index2.css">
   </head>
   <body>
     <form action="" class="signupform" id="myForm">
       <strong><label for="name"> FIRSTNAME:</label></strong>
-      <input type="text" id="name" placeholder=" NAME" />
+      <input type="text" id="name" placeholder=" NAME" required/>
       <br />
 
       <strong><label for="surname"> LAST NAME:</label></strong>
@@ -19,7 +20,7 @@
       <input
         type="number"
         id="mobile number"
-        placeholder=" NUMBER"
+        placeholder=" NUMBER"  required
         min="1000000000"
         max="9999999999"
       />
@@ -39,13 +40,13 @@
       <br />
 
       <strong><label for="email">EMAIL</label></strong>
-      <input type="email" id="email" placeholder="email" />
+      <input type="email" id="email" placeholder="email" required/>
       <br />
 
       <strong
         ><label for="adress" id="saddress">SHIPPING ADDRESS</label></strong
       >
-      <input type="text" id="adress1" placeholder="line 1" /><br />
+      <input type="text" id="adress1" placeholder="line 1" required/><br />
       <input type="text" id="adress2" placeholder="line 2" /><br />
       <input type="text" id="adress3" placeholder="line 3" /><br />
 
@@ -53,17 +54,17 @@
       <input type="text" id="landmark" />
       <br />
       <strong><label for="pincode">PINCODE</label></strong>
-      <input type="number" id="pincode" min="100000" max="999999" />
+      <input type="number" id="pincode" min="100000" max="999999" required/>
       <br />
 
       <strong><label for="city">CITY</label></strong>
-      <input type="text" id="city" />
+      <input type="text" id="city" required/>
       <br />
       <strong><label for="state">STATE</label></strong>
-      <input type="text" id="state" />
+      <input type="text" id="state" required/>
       <br />
       <strong><label for="password">CREATE YOUR PASSWORD</label></strong>
-      <input type="password" id="password" placeholder="PASSWORD" />
+      <input type="password" id="password" placeholder="PASSWORD" required/>
       <br />
       <strong><label for="rpassword">RETYPE YOUR PASSWORD</label></strong>
       <input
