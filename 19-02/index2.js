@@ -13,7 +13,7 @@ function uimaker() {
     let td5 = document.createElement("td");
     td5.innerHTML = ele.email;
     let td6 = document.createElement("td");
-    td6.innerHTML = ele.address;
+    td6.innerHTML = ele.address.ad1 + ', ' + ele.address.ad2 + ', ' + ele.address.ad3;
     let td7 = document.createElement("td");
     td7.innerHTML = ele.landmark;
     let td8 = document.createElement("td");
@@ -51,7 +51,12 @@ document
     let address = {
       ad1,ad2,ad3
     }
-
+ let rpassword=document.getElementById("rpassword").value
+ 
+ if (password !== rpassword ) {
+  alert("your Passwords and retype password do not match. Please check and try again.");
+  return; 
+}
 
     let detail = {
       name: name,
